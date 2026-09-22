@@ -11,7 +11,7 @@ confidence intervals, recorded negative results, and no required inference-time 
 
 | Area | Project | Key idea | Status |
 |---|---|---|---|
-| Medical retrieval | [K-BMEM](https://github.com/RUMPELL/K-BMEM) | Korean–English medical embeddings for on-premise retrieval, with a statistical evaluation harness | Public · MIT · CI · **flagship** |
+| Medical retrieval | [K-BMEM](https://github.com/RUMPELL/K-BMEM) | Korean–English medical embeddings for on-premise retrieval, with published training and statistical-evaluation pipelines | Public · MIT · CI · **flagship** |
 | Clinical NLP / LLM | Clinical AIS prediction | Qwen3-8B + LoRA multi-label injury coding from CT reports | Private (governance) |
 | Medical imaging | [RSNA 2024 lumbar MRI](https://github.com/RUMPELL/RSNA2024_LSDC_kaggle) | DICOM → YOLOv8 localisation → 2.5D EfficientNet severity | Public · MIT · CI · partial |
 | AI engineering | [emergency_call_stt](https://github.com/RUMPELL/emergency_call_stt) | Resumable, fully mocked-tested emergency-call STT CLI | Public · MIT · CI |
@@ -31,7 +31,9 @@ with false-negative controls, deterministic fine-tuning with checkpoint identity
 evaluation harness with paired-bootstrap CIs and exact McNemar tests against sparse, dense,
 and commercial-API references. Negative results (DAPT, reranker distillation, hybrid
 retrieval, source ablations) are recorded as first-class evidence. Model card, data card,
-security policy, citation metadata, packaged CLI.
+security policy, citation metadata, packaged CLI. The public release includes the original
+batch-construction, fine-tuning, and statistical evaluation pipelines (4 scripts, ~4.3k LOC)
+with 308 synthetic-data unit tests and a claim-to-code map.
 **Status.** Public, MIT, CI on Python 3.10–3.12. Aggregate benchmark only; weights and
 source datasets are not distributed, and the evaluation splits had prior exposure — stated
 in the repository.
